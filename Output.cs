@@ -64,7 +64,7 @@ namespace CircuitSimulator
 		{
 			if (inputs?.Count > 0)
 				foreach (Input<T> input in inputs)
-					input.Update();
+					input.SetValue(value);
 		}
 
 		public void Bind(Input<T> input)

@@ -25,7 +25,7 @@ namespace CircuitSimulator
 		
 		public Input<T> Fetch<T>(int idx)
 		{
-			return (Input<T>) inputs[idx].Item1;
+			return inputs[idx].Item1 as Input<T>;
 		}
 
 		public int Count { get => inputs.Count; }
@@ -43,8 +43,6 @@ namespace CircuitSimulator
 		{
 			id = count++;
 			component = c;
-
-			value = default;
 		}
 
 		public void Update()
